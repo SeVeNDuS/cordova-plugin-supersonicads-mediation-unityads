@@ -25,6 +25,7 @@
             <service android:enabled="true" android:name="com.inmobi.signals.activityrecognition.ActivityRecognitionManager" />
         </config-file>
 
+        <source-file src="src/libs/unity-ads-2.aar" target-dir="libs/" />
         <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
     </platform>
 </plugin>
