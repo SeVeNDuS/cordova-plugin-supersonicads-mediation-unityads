@@ -1,0 +1,24 @@
+repositories {
+	maven {
+		url "https://dl.bintray.com/supersonic/android-adapters"
+	}
+
+	jcenter()
+  	flatDir{
+      	dirs 'libs'
+   	}
+}
+
+cdvPluginPostBuildExtras.add({
+	dependencies {
+		compile(name:'unity-ads-2', ext:'aar')
+	    compile 'com.supersonic.adapters:unityadsadapter:1.1.7@jar'
+	}
+});
+
+android {
+	packagingOptions {
+		exclude 'META-INF/NOTICE'
+		exclude 'META-INF/LICENSE'
+	}
+}
